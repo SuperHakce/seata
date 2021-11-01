@@ -303,6 +303,7 @@ public abstract class AbstractNettyRemoting implements Disposable {
                         }
                     }
                 } else {
+                    // 如果没有注册线程池，则就在该线程同步执行
                     try {
                         pair.getFirst().process(ctx, rpcMessage);
                     } catch (Throwable th) {

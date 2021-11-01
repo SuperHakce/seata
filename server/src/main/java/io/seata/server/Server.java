@@ -48,6 +48,7 @@ public class Server {
     public static void start(String[] args) {
         // create logger
         final Logger logger = LoggerFactory.getLogger(Server.class);
+        // 判断是否运行在容器中
         if (ContainerHelper.isRunningInContainer()) {
             logger.info("The server is running in container.");
         }
